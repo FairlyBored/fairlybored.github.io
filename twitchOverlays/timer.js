@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		{
 			if(typeof(document.getElementById('flip-clock')) == 'undefined' || document.getElementById('flip-clock') == null)
 			{
-				const regexp = /((([0-9]{1,2})([dhms]{1})))/g;
+				const regexp = /((([0-9]{1,4})([dhms]{1})))/g;
 				const totalTime = getTotalTime(message.match(regexp));
 				var deadline = new Date(Date.parse(new Date()) + totalTime * 1000);
 				var c = new Clock(deadline, function () {
